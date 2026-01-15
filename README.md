@@ -105,4 +105,10 @@ See [godot_kokoro/BUILD_INSTRUCTIONS.md](godot_kokoro/BUILD_INSTRUCTIONS.md) for
 
 ## License
 
-MIT License
+This project is licensed under the MIT License.
+
+### Third-Party Licenses
+
+- **Kokoro TTS Models** - Apache 2.0 License ([Kokoro](https://github.com/hexgrad/kokoro))
+- **Sherpa-ONNX** - Apache 2.0 License ([k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx))
+- **ONNX Runtime** - MIT License ([Microsoft](https://github.com/microsoft/onnxruntime))
