@@ -1,6 +1,6 @@
 # Godot Kokoro TTS
 
-A Godot 4.1+ GDExtension for high-quality text-to-speech using the Kokoro TTS engine (via Sherpa-ONNX).
+A Godot 4.1+ GDExtension for high-quality text-to-speech using the Kokoro TTS engine (via Sherpa-ONNX). Powers [Project Alex](https://berilli.itch.io/project-alex) AI desktop companion.
 
 ## Features
 
