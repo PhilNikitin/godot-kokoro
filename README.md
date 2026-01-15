@@ -2,6 +2,8 @@
 
 A Godot 4.1+ GDExtension for high-quality text-to-speech using the Kokoro TTS engine (via Sherpa-ONNX). Powers [Project Alex](https://berilli.itch.io/project-alex) AI desktop companion.
 
+[![Project Alex](https://img.itch.zone/aW1nLzI1MDA5Mjg4LnBuZw==/315x250%23c/IGqJE3.png)](https://berilli.itch.io/project-alex)
+
 ## Features
 
 - High-quality neural TTS with multiple voices
@@ -105,9 +107,7 @@ See [godot_kokoro/BUILD_INSTRUCTIONS.md](godot_kokoro/BUILD_INSTRUCTIONS.md) for
 
 ## Projects Using This
 
-[![Project Alex](https://img.itch.zone/aW1nLzI1MDA5Mjg4LnBuZw==/315x250%23c/IGqJE3.png)](https://berilli.itch.io/project-alex)
-
-**[Project Alex](https://berilli.itch.io/project-alex)** - AI-powered desktop companion with voice interaction
+- **[Project Alex](https://berilli.itch.io/project-alex)** - AI-powered desktop companion with voice interaction
 
 ## License
 
