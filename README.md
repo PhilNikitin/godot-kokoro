@@ -103,6 +103,10 @@ tts.lang = "en-us"      # Language: "en-us", "zh", "ja"
 
 See [godot_kokoro/BUILD_INSTRUCTIONS.md](godot_kokoro/BUILD_INSTRUCTIONS.md) for build instructions.
 
+## Projects Using This
+
+- **[Project Alex](https://berilli.itch.io/project-alex)** - AI-powered desktop companion with voice interaction
+
 ## License
 
 This project is licensed under the MIT License.
