@@ -1,0 +1,22 @@
+[configuration]
+entry_symbol = "godot_kokoro_library_init"
+compatibility_minimum = "4.1"
+reloadable = true
+
+[libraries]
+; Windows
+windows.debug.x86_64 = "res://addons/godot_kokoro/bin/godot_kokoro.windows.template_debug.x86_64.dll"
+windows.release.x86_64 = "res://addons/godot_kokoro/bin/godot_kokoro.windows.template_release.x86_64.dll"
+
+; Linux (future)
+;linux.debug.x86_64 = "res://addons/godot_kokoro/bin/libgodot_kokoro.linux.template_debug.x86_64.so"
+;linux.release.x86_64 = "res://addons/godot_kokoro/bin/libgodot_kokoro.linux.template_release.x86_64.so"
+
+; macOS (future)
+;macos.debug = "res://addons/godot_kokoro/bin/libgodot_kokoro.macos.template_debug.framework"
+;macos.release = "res://addons/godot_kokoro/bin/libgodot_kokoro.macos.template_release.framework"
+
+[dependencies]
+; sherpa-onnx dependencies - these DLLs must be in the bin folder
+windows.debug.x86_64 = {"res://addons/godot_kokoro/bin/sherpa-onnx-c-api.dll": "", "res://addons/godot_kokoro/bin/onnxruntime.dll": ""}
+windows.release.x86_64 = {"res://addons/godot_kokoro/bin/sherpa-onnx-c-api.dll": "", "res://addons/godot_kokoro/bin/onnxruntime.dll": ""}

@@ -1,0 +1,45 @@
+#!/usr/bin/env python
+import os
+import sys
+
+# Try to detect godot-cpp location
+godot_cpp_path = "godot-cpp"
+if not os.path.exists(godot_cpp_path):
+    # Check parent directory
+    if os.path.exists("../godot-cpp"):
+        godot_cpp_path = "../godot-cpp"
+
+env = SConscript(godot_cpp_path + "/SConstruct")
+
+# Add sherpa-onnx include path
+env.Append(CPPPATH=["src/", "sherpa-onnx/include/"])
+
+# Add sherpa-onnx library path
+env.Append(LIBPATH=["sherpa-onnx/lib/"])
+
+# Link against sherpa-onnx and onnxruntime
+if env["platform"] == "windows":
+    env.Append(LIBS=["sherpa-onnx-c-api", "onnxruntime"])
+elif env["platform"] == "linux":
+    env.Append(LIBS=["sherpa-onnx-c-api", "onnxruntime"])
+elif env["platform"] == "macos":
+    env.Append(LIBS=["sherpa-onnx-c-api", "onnxruntime"])
+
+# Source files
+sources = Glob("src/*.cpp")
+
+# Build the shared library
+if env["platform"] == "macos":
+    library = env.SharedLibrary(
+        "bin/libgodot_kokoro.{}.{}.framework/libgodot_kokoro.{}.{}".format(
+            env["platform"], env["target"], env["platform"], env["target"]
+        ),
+        source=sources,
+    )
+else:
+    library = env.SharedLibrary(
+        "bin/godot_kokoro{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
+        source=sources,
+    )
+
+Default(library)

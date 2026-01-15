@@ -1,0 +1,19 @@
+# Godot
+.godot/
+*.import
+*.uid
+/android/
+
+# IDE/Tools
+.claude/
+
+# Temp files
+~*
+
+# Build artifacts
+godot_kokoro/godot-cpp/
+godot_kokoro/bin/
+godot_kokoro/sherpa-onnx/
+
+# Models (too large for git)
+addons/godot_kokoro/models/
