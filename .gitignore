@@ -14,6 +14,8 @@
 godot_kokoro/godot-cpp/
 godot_kokoro/bin/
 godot_kokoro/sherpa-onnx/
+*.os
+.sconsign.dblite
 
 # Models (too large for git)
 addons/godot_kokoro/models/

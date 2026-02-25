@@ -24,6 +24,8 @@ elif env["platform"] == "linux":
     env.Append(LIBS=["sherpa-onnx-c-api", "onnxruntime"])
 elif env["platform"] == "macos":
     env.Append(LIBS=["sherpa-onnx-c-api", "onnxruntime"])
+    # RPATH: @loader_path = the .framework/ directory; @loader_path/.. = bin/ where dylibs live
+    env.Append(LINKFLAGS=["-Wl,-rpath,@loader_path/.."])
 
 # Source files
 sources = Glob("src/*.cpp")

@@ -12,11 +12,15 @@ windows.release.x86_64 = "res://addons/godot_kokoro/bin/godot_kokoro.windows.tem
 ;linux.debug.x86_64 = "res://addons/godot_kokoro/bin/libgodot_kokoro.linux.template_debug.x86_64.so"
 ;linux.release.x86_64 = "res://addons/godot_kokoro/bin/libgodot_kokoro.linux.template_release.x86_64.so"
 
-; macOS (future)
-;macos.debug = "res://addons/godot_kokoro/bin/libgodot_kokoro.macos.template_debug.framework"
-;macos.release = "res://addons/godot_kokoro/bin/libgodot_kokoro.macos.template_release.framework"
+; macOS (universal2: arm64 + x86_64)
+macos.debug = "res://addons/godot_kokoro/bin/libgodot_kokoro.macos.template_debug.framework"
+macos.release = "res://addons/godot_kokoro/bin/libgodot_kokoro.macos.template_release.framework"
 
 [dependencies]
-; sherpa-onnx dependencies - these DLLs must be in the bin folder
+; Windows - sherpa-onnx dependencies (DLLs must be in the bin folder)
 windows.debug.x86_64 = {"res://addons/godot_kokoro/bin/sherpa-onnx-c-api.dll": "", "res://addons/godot_kokoro/bin/onnxruntime.dll": ""}
 windows.release.x86_64 = {"res://addons/godot_kokoro/bin/sherpa-onnx-c-api.dll": "", "res://addons/godot_kokoro/bin/onnxruntime.dll": ""}
+
+; macOS - sherpa-onnx dependencies (no onnxruntime_providers_shared on macOS)
+macos.debug = {"res://addons/godot_kokoro/bin/libsherpa-onnx-c-api.dylib": "", "res://addons/godot_kokoro/bin/libonnxruntime.1.23.2.dylib": ""}
+macos.release = {"res://addons/godot_kokoro/bin/libsherpa-onnx-c-api.dylib": "", "res://addons/godot_kokoro/bin/libonnxruntime.1.23.2.dylib": ""}
